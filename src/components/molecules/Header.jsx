@@ -1,0 +1,49 @@
+import React from "react";
+import { css, styled, Box, Typography, Button } from "@mui/material";
+import { Link } from "react-router-dom";
+
+export const Header = styled((props) => {
+  /** Property */
+  const { ...others } = props;
+
+  /** Render */
+  return (
+    <Box {...others}>
+      <Typography sx={{ fontWeight: "bold" }}>DONG IL</Typography>
+      <Box>
+        <Button variant="outlined" sx={{ mr: 1 }}>
+          <Link
+            to={"/"}
+            style={{ textDecoration: "none", color: "dodgerblue" }}
+          >
+            HOME
+          </Link>
+        </Button>
+        <Button variant="outlined" sx={{ mr: 1 }}>
+          <Link
+            to={"/lists"}
+            style={{ textDecoration: "none", color: "dodgerblue" }}
+          >
+            LISTS
+          </Link>
+        </Button>
+        <Button variant="outlined">
+          <Link
+            to={"/issues"}
+            style={{ textDecoration: "none", color: "dodgerblue" }}
+          >
+            ISSUES
+          </Link>
+        </Button>
+      </Box>
+    </Box>
+  );
+})(({ theme }) => {
+  return css`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+  `;
+});
