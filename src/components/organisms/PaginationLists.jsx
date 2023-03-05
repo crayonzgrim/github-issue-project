@@ -47,12 +47,12 @@ export const PaginationLists = styled((props) => {
 
   /** Render */
   return (
-    <Box {...others} sx={{ position: "relative", height: "720px" }}>
+    <Box {...others} sx={{ position: "relative", height: "675px" }}>
       <Box
         sx={{
           overflow: "scroll",
-          minHeight: "650px",
-          maxHeight: "650px",
+          minHeight: "620px",
+          maxHeight: "620px",
         }}
       >
         {issueLists
@@ -87,7 +87,6 @@ export const PaginationLists = styled((props) => {
                         </Typography>
                         <Typography
                           variant={"body2"}
-                          component={"span"}
                           onClick={() => window.open(html_url, "_target")}
                           sx={{
                             color: "dodgerblue",

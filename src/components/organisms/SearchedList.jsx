@@ -168,7 +168,7 @@ export const SearchedList = styled((props) => {
 
     .searched-lists {
       overflow: scroll;
-      height: 360px;
+      height: 320px;
       border: 2px solid lightgrey;
       border-radius: 10px;
     }

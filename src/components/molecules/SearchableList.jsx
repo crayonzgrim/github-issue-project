@@ -33,7 +33,7 @@ export const SearchableList = styled((props) => {
       overflow: scroll;
 
       width: 100%;
-      height: 330px;
+      height: 300px;
 
       border: 2px solid lightGray;
       border-radius: 8px;

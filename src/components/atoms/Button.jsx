@@ -6,13 +6,21 @@ import {
   styled,
 } from "@mui/material";
 
-export const Button = styled((props) => {
-  /** Property */
-  const { children, ...others } = props;
+export const Button = styled(
+  React.forwardRef((props, ref) => {
+    /** Property */
+    const { children, ...others } = props;
 
-  /** Render */
-  return <MuiButton {...others}>{children}</MuiButton>;
-})(({ theme }) => {
+    /** Function *
+
+    /** Render */
+    return (
+      <MuiButton {...others} ref={ref}>
+        {children}
+      </MuiButton>
+    );
+  })
+)(({ theme }) => {
   return css`
     &.${MuiButtonClasses.root} {
       text-transform: none;
