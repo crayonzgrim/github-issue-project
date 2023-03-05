@@ -1,10 +1,8 @@
-import React, { useEffect, useState, useMemo, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   styled,
   css,
-  Paper,
-  Pagination,
   TablePagination,
   List,
   ListItem,
@@ -12,6 +10,7 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
+import { EllipsisText } from "../atoms/EllipsisText";
 
 const PER_PAGE = 6;
 
@@ -105,13 +104,13 @@ export const PaginationLists = styled((props) => {
                         component={"span"}
                         sx={{ display: "flex", flexDirection: "column" }}
                       >
-                        <Typography
+                        <EllipsisText
                           variant={"body2"}
                           component={"span"}
                           sx={{ display: "inline-block" }}
                         >
                           이슈 : {title}
-                        </Typography>
+                        </EllipsisText>
 
                         <Box>
                           <Typography

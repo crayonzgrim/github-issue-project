@@ -1,4 +1,4 @@
-import Ract from "react";
+import React from "react";
 import { styled, css, Box, Typography } from "@mui/material";
 import { Button } from "../atoms/Button";
 import { useLocation, useNavigate } from "react-router-dom";

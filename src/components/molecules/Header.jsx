@@ -11,30 +11,25 @@ export const Header = styled((props) => {
     <Box {...others}>
       <Typography sx={{ fontWeight: "bold" }}>DONG IL</Typography>
       <Box>
-        <Button variant="outlined" sx={{ mr: 1 }}>
-          <Link
-            to={"/"}
-            style={{ textDecoration: "none", color: "dodgerblue" }}
-          >
+        <Link to={"/"} style={{ textDecoration: "none", color: "dodgerblue" }}>
+          <Button variant="outlined" sx={{ mr: 1 }}>
             HOME
-          </Link>
-        </Button>
-        <Button variant="outlined" sx={{ mr: 1 }}>
-          <Link
-            to={"/lists"}
-            style={{ textDecoration: "none", color: "dodgerblue" }}
-          >
+          </Button>
+        </Link>
+        <Link
+          to={"/lists"}
+          style={{ textDecoration: "none", color: "dodgerblue" }}
+        >
+          <Button variant="outlined" sx={{ mr: 1 }}>
             LISTS
-          </Link>
-        </Button>
-        <Button variant="outlined">
-          <Link
-            to={"/issues"}
-            style={{ textDecoration: "none", color: "dodgerblue" }}
-          >
-            ISSUES
-          </Link>
-        </Button>
+          </Button>
+        </Link>
+        <Link
+          to={"/issues"}
+          style={{ textDecoration: "none", color: "dodgerblue" }}
+        >
+          <Button variant="outlined">ISSUES</Button>
+        </Link>
       </Box>
     </Box>
   );

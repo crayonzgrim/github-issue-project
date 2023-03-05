@@ -1,15 +1,6 @@
-import React, { useState } from "react";
-import {
-  Snackbar as MuiSnackbar,
-  Slide as MuiSlide,
-  Alert as MuiAlert,
-  styled,
-  css,
-} from "@mui/material";
-
-const Alert = React.forwardRef((props, ref) => {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
+import React from "react";
+import { Snackbar as MuiSnackbar, styled, css } from "@mui/material";
+import { Alert } from "./Alert";
 
 export const Snackbar = styled((props) => {
   /** Property */
@@ -19,11 +10,7 @@ export const Snackbar = styled((props) => {
 
   /** Render */
   return (
-    <MuiSnackbar
-      {...others}
-      open={open}
-      // autoHideDuration={6000}
-    >
+    <MuiSnackbar {...others} open={open}>
       <Alert severity={severity} sx={{ width: "100%" }}>
         {message ?? ""}
       </Alert>
