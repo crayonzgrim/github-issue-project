@@ -1,10 +1,12 @@
 import React from "react";
 import { css, styled, Box, Typography, Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Header = styled((props) => {
   /** Property */
   const { ...others } = props;
+
+  const { pathname } = useLocation();
 
   /** Render */
   return (
@@ -12,7 +14,10 @@ export const Header = styled((props) => {
       <Typography sx={{ fontWeight: "bold" }}>DONG IL</Typography>
       <Box>
         <Link to={"/"} style={{ textDecoration: "none", color: "dodgerblue" }}>
-          <Button variant="outlined" sx={{ mr: 1 }}>
+          <Button
+            variant={pathname === "/" ? "contained" : "outlined"}
+            sx={{ mr: 1 }}
+          >
             HOME
           </Button>
         </Link>
@@ -20,7 +25,10 @@ export const Header = styled((props) => {
           to={"/lists"}
           style={{ textDecoration: "none", color: "dodgerblue" }}
         >
-          <Button variant="outlined" sx={{ mr: 1 }}>
+          <Button
+            variant={pathname === "/lists" ? "contained" : "outlined"}
+            sx={{ mr: 1 }}
+          >
             LISTS
           </Button>
         </Link>
@@ -28,7 +36,9 @@ export const Header = styled((props) => {
           to={"/issues"}
           style={{ textDecoration: "none", color: "dodgerblue" }}
         >
-          <Button variant="outlined">ISSUES</Button>
+          <Button variant={pathname === "/issues" ? "contained" : "outlined"}>
+            ISSUES
+          </Button>
         </Link>
       </Box>
     </Box>
