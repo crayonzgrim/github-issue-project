@@ -1,3 +1,10 @@
+# 패키지 매니저 도구
+- npm
+
+# 사용 라이브러리
+- React.js
+- MUI
+
 # 페이히어 프론트엔드 과제 전형 (Web)
 
 - 검색창에 Repository명을 입력해서 Repository를 검색할 수 있다.
